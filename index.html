@@ -69,6 +69,23 @@
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full font-sans-clean bg-stone-50 text-stone-800 overflow-auto">
+  <div id="welcome-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm transition-opacity duration-500">
+  <div class="bg-white p-8 md:p-12 max-w-lg w-[90%] text-center shadow-2xl border border-gray-100 relative">
+    <div class="mb-6">
+      <h2 class="font-serif-elegant text-3xl text-gray-900 mb-4">Welcome to Magna Conium</h2>
+      <div class="w-12 h-[1px] bg-black mx-auto"></div>
+    </div>
+    <p class="font-sans-clean text-gray-600 leading-relaxed mb-8 text-lg">
+      Dear visitor, our website is currently under construction. 
+      It will be fully operational shortly. 
+      <br><br>
+      <span class="text-sm italic text-gray-400">Please visit us again soon.</span>
+    </p>
+    <button onclick="closeModal()" class="px-10 py-3 bg-black text-white text-sm tracking-widest hover:bg-gray-800 transition-all font-sans-clean">
+      UNDERSTOOD
+    </button>
+  </div>
+</div>
   <div class="w-full min-h-full"><!-- Navigation -->
    <nav class="fixed top-0 left-0 right-0 z-50 bg-stone-50/95 backdrop-blur-sm border-b border-stone-200/50">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
@@ -424,6 +441,17 @@
    </footer>
   </div>
   <script>
+
+
+   function closeModal() {
+    const modal = document.getElementById('welcome-modal');
+    modal.style.opacity = '0';
+    setTimeout(() => {
+        modal.style.display = 'none';
+    }, 500);
+}
+   
+   
     const defaultConfig = {
       hero_headline: "Magna Conium: Redefining Furniture Supply.",
       hero_subheadline: "A global bridge connecting Turkey's finest furniture manufacturing with international projects.",
