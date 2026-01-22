@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magna Conium | International Furniture Supply Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    .font-serif-elegant {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    .font-sans-clean {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: currentColor;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    .card-hover {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .stagger-1 { animation-delay: 0.1s; }
+    .stagger-2 { animation-delay: 0.2s; }
+    .stagger-3 { animation-delay: 0.3s; }
+    .stagger-4 { animation-delay: 0.4s; }
+    .stagger-5 { animation-delay: 0.5s; }
+    .line-reveal {
+      width: 0;
+      animation: lineReveal 1s ease forwards 0.6s;
+    }
+    @keyframes lineReveal {
+      to { width: 80px; }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-sans-clean bg-stone-50 text-stone-800 overflow-auto">
+  <div class="w-full min-h-full"><!-- Navigation -->
+   <nav class="fixed top-0 left-0 right-0 z-50 bg-stone-50/95 backdrop-blur-sm border-b border-stone-200/50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+     <div class="flex items-center justify-between h-20"><a href="#hero" class="flex items-center gap-3">
+       <svg width="40" height="40" viewbox="0 0 40 40" fill="none"><rect x="4" y="4" width="14" height="14" fill="#3d3d3d" /> <rect x="22" y="4" width="14" height="14" fill="#a08070" /> <rect x="4" y="22" width="14" height="14" fill="#a08070" /> <rect x="22" y="22" width="14" height="14" fill="#3d3d3d" />
+       </svg><span class="font-serif-elegant text-xl font-semibold tracking-wide text-stone-900">Magna Conium</span> </a>
+      <div class="hidden md:flex items-center gap-10"><a href="#concept" class="nav-link text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Concept</a> <a href="#collections" class="nav-link text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Collections</a> <a href="#services" class="nav-link text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Services</a> <a href="#process" class="nav-link text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Process</a> <a href="#contact" class="px-6 py-2.5 bg-stone-900 text-stone-50 text-sm font-medium hover:bg-stone-800 transition-colors">Contact</a>
+      </div><button id="mobile-menu-btn" class="md:hidden p-2">
+       <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="6" x2="21" y2="6" /> <line x1="3" y1="12" x2="21" y2="12" /> <line x1="3" y1="18" x2="21" y2="18" />
+       </svg></button>
+     </div>
+    </div><!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-stone-50 border-t border-stone-200">
+     <div class="px-6 py-6 space-y-4"><a href="#concept" class="block text-sm font-medium text-stone-600 hover:text-stone-900">Concept</a> <a href="#collections" class="block text-sm font-medium text-stone-600 hover:text-stone-900">Collections</a> <a href="#services" class="block text-sm font-medium text-stone-600 hover:text-stone-900">Services</a> <a href="#process" class="block text-sm font-medium text-stone-600 hover:text-stone-900">Process</a> <a href="#contact" class="inline-block px-6 py-2.5 bg-stone-900 text-stone-50 text-sm font-medium">Contact</a>
+     </div>
+    </div>
+   </nav><!-- Hero Section -->
+   <section id="hero" class="relative min-h-screen flex items-center pt-20">
+    <div class="absolute inset-0 overflow-hidden">
+     <div class="absolute top-20 right-0 w-1/2 h-full bg-gradient-to-l from-amber-50/30 to-transparent"></div>
+     <div class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-stone-100/50 to-transparent"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-32">
+     <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="space-y-8">
+       <div class="space-y-6 opacity-0 fade-in">
+        <p class="text-sm font-medium tracking-widest text-amber-700/80 uppercase">International Furniture Supply Hub</p>
+        <h1 id="hero-headline" class="font-serif-elegant text-5xl lg:text-6xl xl:text-7xl font-semibold text-stone-900 leading-tight">Magna Conium: Redefining Furniture Supply.</h1>
+        <div class="h-px bg-amber-700/40 line-reveal"></div>
+       </div>
+       <p id="hero-subheadline" class="text-lg lg:text-xl text-stone-600 leading-relaxed max-w-xl opacity-0 fade-in stagger-2">A global bridge connecting Turkey's finest furniture manufacturing with international projects.</p>
+       <div class="flex flex-col sm:flex-row gap-4 opacity-0 fade-in stagger-3"><a href="#contact" id="cta-button" class="inline-flex items-center justify-center px-8 py-4 bg-stone-900 text-stone-50 font-medium hover:bg-stone-800 transition-all group"> <span>Contact Magna Conium</span>
+         <svg class="ml-3 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+         </svg></a> <a href="#concept" class="inline-flex items-center justify-center px-8 py-4 border border-stone-300 text-stone-700 font-medium hover:border-stone-400 hover:bg-stone-100 transition-all"> Explore Our Approach </a>
+       </div>
+      </div>
+      <div class="relative opacity-0 fade-in stagger-4">
+       <div class="relative aspect-[4/5] bg-stone-200"><!-- Abstract furniture illustration -->
+        <svg class="absolute inset-0 w-full h-full" viewbox="0 0 400 500" fill="none"><rect x="40" y="60" width="320" height="200" fill="#f5f5f4" stroke="#a8a29e" stroke-width="1" /> <rect x="60" y="80" width="120" height="160" fill="#d6ccc2" /> <rect x="200" y="80" width="140" height="80" fill="#a08070" /> <rect x="200" y="180" width="140" height="60" fill="#78716c" /> <rect x="40" y="280" width="160" height="180" fill="#3d3d3d" /> <rect x="220" y="280" width="140" height="180" fill="#f5f5f4" stroke="#d6d3d1" stroke-width="1" /> <rect x="240" y="300" width="100" height="100" fill="#e7e5e4" /> <circle cx="290" cy="350" r="30" fill="#a08070" opacity="0.6" /> <rect x="60" y="300" width="120" height="20" fill="#78716c" /> <rect x="60" y="340" width="80" height="100" fill="#44403c" />
+        </svg>
+       </div>
+       <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-amber-100/60"></div>
+       <div class="absolute -top-6 -right-6 w-24 h-24 border border-stone-300"></div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Concept Section -->
+   <section id="concept" class="py-24 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+     <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="relative order-2 lg:order-1">
+       <div class="aspect-square bg-stone-100 relative overflow-hidden">
+        <svg class="w-full h-full" viewbox="0 0 400 400" fill="none"><!-- Supply hub visualization --> <circle cx="200" cy="200" r="150" fill="none" stroke="#e7e5e4" stroke-width="1" /> <circle cx="200" cy="200" r="100" fill="none" stroke="#d6d3d1" stroke-width="1" /> <circle cx="200" cy="200" r="50" fill="#3d3d3d" /> <circle cx="200" cy="50" r="20" fill="#a08070" /> <circle cx="330" cy="130" r="15" fill="#78716c" /> <circle cx="350" cy="200" r="18" fill="#a08070" /> <circle cx="330" cy="270" r="15" fill="#78716c" /> <circle cx="200" cy="350" r="20" fill="#a08070" /> <circle cx="70" cy="270" r="15" fill="#78716c" /> <circle cx="50" cy="200" r="18" fill="#a08070" /> <circle cx="70" cy="130" r="15" fill="#78716c" /> <line x1="200" y1="150" x2="200" y2="70" stroke="#d6d3d1" stroke-width="1" /> <line x1="235" y1="165" x2="315" y2="135" stroke="#d6d3d1" stroke-width="1" /> <line x1="250" y1="200" x2="332" y2="200" stroke="#d6d3d1" stroke-width="1" /> <line x1="235" y1="235" x2="315" y2="265" stroke="#d6d3d1" stroke-width="1" /> <line x1="200" y1="250" x2="200" y2="330" stroke="#d6d3d1" stroke-width="1" /> <line x1="165" y1="235" x2="85" y2="265" stroke="#d6d3d1" stroke-width="1" /> <line x1="150" y1="200" x2="68" y2="200" stroke="#d6d3d1" stroke-width="1" /> <line x1="165" y1="165" x2="85" y2="135" stroke="#d6d3d1" stroke-width="1" /> <text x="200" y="205" text-anchor="middle" fill="white" font-size="12" font-family="Inter">
+          HUB
+         </text>
+        </svg>
+       </div>
+       <div class="absolute -bottom-4 -right-4 w-full h-full border border-amber-200 -z-10"></div>
+      </div>
+      <div class="space-y-8 order-1 lg:order-2">
+       <div class="space-y-4">
+        <p class="text-sm font-medium tracking-widest text-amber-700/80 uppercase">Our Philosophy</p>
+        <h2 id="concept-title" class="font-serif-elegant text-4xl lg:text-5xl font-semibold text-stone-900">The Furniture Supply Hub</h2>
+       </div>
+       <div class="space-y-6 text-stone-600 leading-relaxed">
+        <p>Magna Conium operates as a centralized supply hub, providing comprehensive coordination services for global furniture buyers seeking access to Turkey's manufacturing excellence.</p>
+        <p>Our role encompasses manufacturer selection, quality alignment, production coordination, and consolidation planning—creating seamless pathways between Turkish craftsmanship and international projects.</p>
+       </div>
+       <div class="grid grid-cols-2 gap-6 pt-6">
+        <div class="space-y-2">
+         <div class="text-3xl font-serif-elegant font-semibold text-stone-900">
+          40+
+         </div>
+         <div class="text-sm text-stone-500">
+          Manufacturing Partners
+         </div>
+        </div>
+        <div class="space-y-2">
+         <div class="text-3xl font-serif-elegant font-semibold text-stone-900">
+          25
+         </div>
+         <div class="text-sm text-stone-500">
+          Countries Served
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Collections Section -->
+   <section id="collections" class="py-24 lg:py-32 bg-stone-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+     <div class="text-center max-w-2xl mx-auto mb-16">
+      <p class="text-sm font-medium tracking-widest text-amber-700/80 uppercase mb-4">Our Portfolio</p>
+      <h2 class="font-serif-elegant text-4xl lg:text-5xl font-semibold text-stone-900">Collections</h2>
+     </div>
+     <div class="grid md:grid-cols-2 gap-8"><!-- Office Solutions -->
+      <div class="group card-hover bg-white">
+       <div class="aspect-[4/3] bg-stone-200 relative overflow-hidden">
+        <svg class="w-full h-full" viewbox="0 0 400 300" fill="none"><!-- Office furniture scene --> <rect x="0" y="0" width="400" height="300" fill="#fafaf9" /> <rect x="50" y="180" width="300" height="100" fill="#e7e5e4" /> <rect x="60" y="120" width="180" height="60" fill="#3d3d3d" /> <rect x="60" y="100" width="180" height="20" fill="#44403c" /> <rect x="260" y="130" width="80" height="50" fill="#a08070" /> <rect x="265" y="135" width="70" height="40" fill="#78716c" /> <ellipse cx="150" cy="220" rx="40" ry="15" fill="#d6d3d1" /> <rect x="130" y="160" width="40" height="60" fill="#57534e" /> <rect x="90" y="200" width="25" height="40" fill="#78716c" /> <rect x="180" y="200" width="25" height="40" fill="#78716c" /> <rect x="300" y="60" width="60" height="80" fill="#f5f5f4" stroke="#d6d3d1" /> <line x1="300" y1="80" x2="360" y2="80" stroke="#d6d3d1" /> <line x1="300" y1="100" x2="360" y2="100" stroke="#d6d3d1" /> <line x1="300" y1="120" x2="360" y2="120" stroke="#d6d3d1" />
+        </svg>
+        <div class="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/5 transition-colors duration-500"></div>
+       </div>
+       <div class="p-8">
+        <h3 class="font-serif-elegant text-2xl font-semibold text-stone-900 mb-4">Office Solutions</h3>
+        <p class="text-stone-600 leading-relaxed mb-6">Professional, ergonomic, and project-ready office furniture developed in collaboration with award-winning manufacturers. Designed for modern workspaces that demand both functionality and aesthetic refinement.</p>
+        <div class="flex flex-wrap gap-2"><span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs font-medium">Executive</span> <span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs font-medium">Workstations</span> <span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs font-medium">Conference</span> <span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs font-medium">Ergonomic</span>
+        </div>
+       </div>
+      </div><!-- Residential Collections -->
+      <div class="group card-hover bg-white">
+       <div class="aspect-[4/3] bg-stone-200 relative overflow-hidden">
+        <svg class="w-full h-full" viewbox="0 0 400 300" fill="none"><!-- Residential furniture scene --> <rect x="0" y="0" width="400" height="300" fill="#fafaf9" /> <rect x="40" y="100" width="200" height="120" fill="#a08070" /> <rect x="50" y="110" width="80" height="50" fill="#d6ccc2" /> <rect x="140" y="110" width="90" height="50" fill="#d6ccc2" /> <rect x="50" y="170" width="180" height="40" fill="#8b7355" /> <rect x="280" y="80" width="80" height="140" fill="#3d3d3d" /> <rect x="290" y="90" width="60" height="50" fill="#57534e" /> <rect x="290" y="150" width="60" height="60" fill="#44403c" /> <circle cx="320" cy="115" r="8" fill="#a08070" /> <rect x="120" y="240" width="160" height="40" fill="#e7e5e4" /> <rect x="130" y="230" width="60" height="10" fill="#d6d3d1" /> <rect x="200" y="230" width="70" height="10" fill="#d6d3d1" /> <ellipse cx="80" cy="260" rx="30" ry="20" fill="#78716c" />
+        </svg>
+        <div class="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/5 transition-colors duration-500"></div>
+       </div>
+       <div class="p-8">
+        <h3 class="font-serif-elegant text-2xl font-semibold text-stone-900 mb-4">Residential Collections</h3>
+        <p class="text-stone-600 leading-relaxed mb-6">Curated premium furniture for living, dining, and bedroom spaces. Suitable for international projects and wholesale distribution, our residential range combines Turkish craftsmanship with contemporary design sensibilities.</p>
+        <div class="flex flex-wrap gap-2"><span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs font-medium">Living</span> <span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs font-medium">Dining</span> <span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs font-medium">Bedroom</span> <span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs font-medium">Premium</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Services Section -->
+   <section id="services" class="py-24 lg:py-32 bg-stone-900 text-stone-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+     <div class="text-center max-w-2xl mx-auto mb-16">
+      <p class="text-sm font-medium tracking-widest text-amber-400/80 uppercase mb-4">What We Do</p>
+      <h2 class="font-serif-elegant text-4xl lg:text-5xl font-semibold text-stone-50">Our Services</h2>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="p-8 border border-stone-700 hover:border-stone-600 transition-colors">
+       <div class="w-12 h-12 mb-6 flex items-center justify-center">
+        <svg width="40" height="40" viewbox="0 0 40 40" fill="none" stroke="#a08070" stroke-width="1.5"><path d="M8 32V12L20 4L32 12V32H8Z" /> <path d="M16 32V22H24V32" /> <path d="M14 18H26" />
+        </svg>
+       </div>
+       <h3 class="font-serif-elegant text-xl font-semibold text-stone-50 mb-3">Furniture Supply Coordination</h3>
+       <p class="text-stone-400 text-sm leading-relaxed">Office and residential furniture sourcing through a project-based model. No retail, no stock sales—only structured B2B partnerships.</p>
+      </div>
+      <div class="p-8 border border-stone-700 hover:border-stone-600 transition-colors">
+       <div class="w-12 h-12 mb-6 flex items-center justify-center">
+        <svg width="40" height="40" viewbox="0 0 40 40" fill="none" stroke="#a08070" stroke-width="1.5"><circle cx="20" cy="20" r="12" /> <path d="M20 8V20L28 24" /> <circle cx="20" cy="20" r="3" fill="#a08070" />
+        </svg>
+       </div>
+       <h3 class="font-serif-elegant text-xl font-semibold text-stone-50 mb-3">Manufacturer Representation</h3>
+       <p class="text-stone-400 text-sm leading-relaxed">Direct representation of selected Turkish manufacturers with a focus on long-term partnership development and market alignment.</p>
+      </div>
+      <div class="p-8 border border-stone-700 hover:border-stone-600 transition-colors">
+       <div class="w-12 h-12 mb-6 flex items-center justify-center">
+        <svg width="40" height="40" viewbox="0 0 40 40" fill="none" stroke="#a08070" stroke-width="1.5"><rect x="6" y="8" width="28" height="24" rx="2" /> <path d="M6 16H34" /> <path d="M14 8V16" /> <path d="M26 8V16" /> <path d="M12 24H20" /> <path d="M12 28H16" />
+        </svg>
+       </div>
+       <h3 class="font-serif-elegant text-xl font-semibold text-stone-50 mb-3">B2B &amp; Project Solutions</h3>
+       <p class="text-stone-400 text-sm leading-relaxed">Supporting international wholesalers, architects, and developers with specification support and FF&amp;E coordination services.</p>
+      </div>
+      <div class="p-8 border border-stone-700 hover:border-stone-600 transition-colors">
+       <div class="w-12 h-12 mb-6 flex items-center justify-center">
+        <svg width="40" height="40" viewbox="0 0 40 40" fill="none" stroke="#a08070" stroke-width="1.5"><circle cx="12" cy="12" r="6" /> <circle cx="28" cy="12" r="6" /> <circle cx="20" cy="28" r="6" /> <path d="M16 16L18 22" /> <path d="M24 16L22 22" />
+        </svg>
+       </div>
+       <h3 class="font-serif-elegant text-xl font-semibold text-stone-50 mb-3">Dealership &amp; Distribution</h3>
+       <p class="text-stone-400 text-sm leading-relaxed">Offering dealership and representation opportunities in selected markets through flexible, partnership-based structures.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Process Section -->
+   <section id="process" class="py-24 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+     <div class="grid lg:grid-cols-2 gap-16 items-start">
+      <div class="space-y-8 lg:sticky lg:top-32">
+       <div class="space-y-4">
+        <p class="text-sm font-medium tracking-widest text-amber-700/80 uppercase">Our Process</p>
+        <h2 class="font-serif-elegant text-4xl lg:text-5xl font-semibold text-stone-900">How We Work</h2>
+       </div>
+       <p class="text-stone-600 leading-relaxed">Our approach is built on transparency, controlled growth, and a long-term focus. Each partnership begins with understanding and evolves through careful coordination.</p>
+       <div class="pt-4 border-t border-stone-200">
+        <p class="text-sm font-medium text-stone-500 uppercase tracking-wider mb-4">Our Principles</p>
+        <div class="flex flex-wrap gap-3"><span class="px-4 py-2 bg-stone-100 text-stone-700 text-sm font-medium">Transparency</span> <span class="px-4 py-2 bg-stone-100 text-stone-700 text-sm font-medium">Controlled Growth</span> <span class="px-4 py-2 bg-stone-100 text-stone-700 text-sm font-medium">Long-term Focus</span>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-0">
+       <div class="relative pl-12 pb-12 border-l border-stone-200">
+        <div class="absolute left-0 top-0 w-6 h-6 -translate-x-1/2 bg-stone-900 rounded-full flex items-center justify-center"><span class="text-xs font-medium text-stone-50">1</span>
+        </div>
+        <div class="pt-0">
+         <h3 class="font-serif-elegant text-xl font-semibold text-stone-900 mb-2">Understanding</h3>
+         <p class="text-stone-600 text-sm leading-relaxed">We begin by thoroughly understanding partner or project needs, specifications, and objectives to ensure alignment from the start.</p>
+        </div>
+       </div>
+       <div class="relative pl-12 pb-12 border-l border-stone-200">
+        <div class="absolute left-0 top-0 w-6 h-6 -translate-x-1/2 bg-amber-700 rounded-full flex items-center justify-center"><span class="text-xs font-medium text-stone-50">2</span>
+        </div>
+        <div class="pt-0">
+         <h3 class="font-serif-elegant text-xl font-semibold text-stone-900 mb-2">Matching</h3>
+         <p class="text-stone-600 text-sm leading-relaxed">Identifying and matching suitable manufacturers and products from our curated network of Turkish production partners.</p>
+        </div>
+       </div>
+       <div class="relative pl-12 pb-12 border-l border-stone-200">
+        <div class="absolute left-0 top-0 w-6 h-6 -translate-x-1/2 bg-stone-600 rounded-full flex items-center justify-center"><span class="text-xs font-medium text-stone-50">3</span>
+        </div>
+        <div class="pt-0">
+         <h3 class="font-serif-elegant text-xl font-semibold text-stone-900 mb-2">Alignment</h3>
+         <p class="text-stone-600 text-sm leading-relaxed">Establishing commercial and technical frameworks that ensure quality standards, pricing structures, and delivery expectations are clearly defined.</p>
+        </div>
+       </div>
+       <div class="relative pl-12 pb-12 border-l border-stone-200">
+        <div class="absolute left-0 top-0 w-6 h-6 -translate-x-1/2 bg-stone-400 rounded-full flex items-center justify-center"><span class="text-xs font-medium text-stone-900">4</span>
+        </div>
+        <div class="pt-0">
+         <h3 class="font-serif-elegant text-xl font-semibold text-stone-900 mb-2">Coordination</h3>
+         <p class="text-stone-600 text-sm leading-relaxed">Managing production timelines, quality control, and export preparation to ensure seamless fulfillment of project requirements.</p>
+        </div>
+       </div>
+       <div class="relative pl-12">
+        <div class="absolute left-0 top-0 w-6 h-6 -translate-x-1/2 bg-stone-200 rounded-full flex items-center justify-center"><span class="text-xs font-medium text-stone-700">5</span>
+        </div>
+        <div class="pt-0">
+         <h3 class="font-serif-elegant text-xl font-semibold text-stone-900 mb-2">Implementation</h3>
+         <p class="text-stone-600 text-sm leading-relaxed">Executing projects through established partnerships, maintaining communication and support throughout delivery and beyond.</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="contact" class="py-24 lg:py-32 bg-stone-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+     <div class="text-center max-w-2xl mx-auto mb-16">
+      <p class="text-sm font-medium tracking-widest text-amber-700/80 uppercase mb-4">Get In Touch</p>
+      <h2 id="contact-title" class="font-serif-elegant text-4xl lg:text-5xl font-semibold text-stone-900">Contact &amp; Support</h2>
+     </div>
+     <div class="grid lg:grid-cols-3 gap-8 mb-16">
+      <div class="bg-white p-8 hover:shadow-lg transition-shadow">
+       <div class="w-12 h-12 bg-stone-900 rounded-full flex items-center justify-center mb-6">
+        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10" /> <path d="M2 12H22" /> <path d="M12 2C14.5 4.5 16 8 16 12C16 16 14.5 19.5 12 22" /> <path d="M12 2C9.5 4.5 8 8 8 12C8 16 9.5 19.5 12 22" />
+        </svg>
+       </div>
+       <h3 class="font-serif-elegant text-xl font-semibold text-stone-900 mb-3">International Inquiries</h3>
+       <p class="text-stone-600 text-sm leading-relaxed mb-6">For global B2B buyers, architects, developers, and project coordinators seeking Turkish furniture sourcing partnerships.</p><a href="mailto:international@magnaconium.com" class="inline-flex items-center text-sm font-medium text-amber-700 hover:text-amber-800"> international@magnaconium.com 
+        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg></a>
+      </div>
+      <div class="bg-white p-8 hover:shadow-lg transition-shadow">
+       <div class="w-12 h-12 bg-amber-700 rounded-full flex items-center justify-center mb-6">
+        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M19 21V5C19 3.9 18.1 3 17 3H7C5.9 3 5 3.9 5 5V21" /> <path d="M3 21H21" /> <path d="M9 7H10" /> <path d="M9 11H10" /> <path d="M14 7H15" /> <path d="M14 11H15" /> <path d="M9 21V15H15V21" />
+        </svg>
+       </div>
+       <h3 class="font-serif-elegant text-xl font-semibold text-stone-900 mb-3">Supplier Applications</h3>
+       <p class="text-stone-600 text-sm leading-relaxed mb-6">For Turkish manufacturers interested in representation opportunities and international market access through our network.</p><a href="mailto:suppliers@magnaconium.com" class="inline-flex items-center text-sm font-medium text-amber-700 hover:text-amber-800"> suppliers@magnaconium.com 
+        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg></a>
+      </div>
+      <div class="bg-white p-8 hover:shadow-lg transition-shadow">
+       <div class="w-12 h-12 bg-stone-600 rounded-full flex items-center justify-center mb-6">
+        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" />
+        </svg>
+       </div>
+       <h3 class="font-serif-elegant text-xl font-semibold text-stone-900 mb-3">General Support</h3>
+       <p class="text-stone-600 text-sm leading-relaxed mb-6">For general questions, feedback, and after-sales communication. Our team is available to assist with any inquiries.</p><a href="mailto:support@magnaconium.com" class="inline-flex items-center text-sm font-medium text-amber-700 hover:text-amber-800"> support@magnaconium.com 
+        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg></a>
+      </div>
+     </div><!-- Contact Form -->
+     <div class="max-w-2xl mx-auto">
+      <div class="bg-white p-8 lg:p-12">
+       <h3 class="font-serif-elegant text-2xl font-semibold text-stone-900 mb-6 text-center">Send Us a Message</h3>
+       <form id="contact-form" class="space-y-6">
+        <div class="grid md:grid-cols-2 gap-6">
+         <div><label for="name" class="block text-sm font-medium text-stone-700 mb-2">Full Name</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-stone-300 focus:border-stone-500 focus:ring-0 outline-none transition-colors" placeholder="Your name">
+         </div>
+         <div><label for="company" class="block text-sm font-medium text-stone-700 mb-2">Company</label> <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-stone-300 focus:border-stone-500 focus:ring-0 outline-none transition-colors" placeholder="Your company">
+         </div>
+        </div>
+        <div><label for="email" class="block text-sm font-medium text-stone-700 mb-2">Email Address</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-stone-300 focus:border-stone-500 focus:ring-0 outline-none transition-colors" placeholder="your@email.com">
+        </div>
+        <div><label for="inquiry-type" class="block text-sm font-medium text-stone-700 mb-2">Inquiry Type</label> <select id="inquiry-type" name="inquiry-type" required class="w-full px-4 py-3 border border-stone-300 focus:border-stone-500 focus:ring-0 outline-none transition-colors bg-white"> <option value="">Select inquiry type</option> <option value="international">International Inquiry</option> <option value="supplier">Supplier Application</option> <option value="general">General Support</option> </select>
+        </div>
+        <div><label for="message" class="block text-sm font-medium text-stone-700 mb-2">Message</label> <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-stone-300 focus:border-stone-500 focus:ring-0 outline-none transition-colors resize-none" placeholder="Tell us about your project or inquiry..."></textarea>
+        </div><button type="submit" class="w-full px-8 py-4 bg-stone-900 text-stone-50 font-medium hover:bg-stone-800 transition-colors"> Send Message </button>
+       </form>
+       <div id="form-success" class="hidden text-center py-12">
+        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+         <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+         </svg>
+        </div>
+        <h4 class="font-serif-elegant text-xl font-semibold text-stone-900 mb-2">Message Sent</h4>
+        <p class="text-stone-600">Thank you for your inquiry. Our team will respond within 48 hours.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="bg-stone-900 text-stone-400 py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+     <div class="grid md:grid-cols-4 gap-12 mb-12">
+      <div class="md:col-span-2">
+       <div class="flex items-center gap-3 mb-6">
+        <svg width="40" height="40" viewbox="0 0 40 40" fill="none"><rect x="4" y="4" width="14" height="14" fill="#fafaf9" /> <rect x="22" y="4" width="14" height="14" fill="#a08070" /> <rect x="4" y="22" width="14" height="14" fill="#a08070" /> <rect x="22" y="22" width="14" height="14" fill="#fafaf9" />
+        </svg><span class="font-serif-elegant text-xl font-semibold text-stone-50">Magna Conium</span>
+       </div>
+       <p class="text-sm leading-relaxed max-w-sm mb-6">International furniture supply hub connecting Turkey's finest manufacturing with global projects. Based in Turkey, serving worldwide.</p>
+       <p class="text-sm text-stone-500">Istanbul, Turkey</p>
+      </div>
+      <div>
+       <h4 class="font-medium text-stone-50 mb-4">Navigation</h4>
+       <ul class="space-y-2 text-sm">
+        <li><a href="#concept" class="hover:text-stone-300 transition-colors">Concept</a></li>
+        <li><a href="#collections" class="hover:text-stone-300 transition-colors">Collections</a></li>
+        <li><a href="#services" class="hover:text-stone-300 transition-colors">Services</a></li>
+        <li><a href="#process" class="hover:text-stone-300 transition-colors">Process</a></li>
+        <li><a href="#contact" class="hover:text-stone-300 transition-colors">Contact</a></li>
+       </ul>
+      </div>
+      <div>
+       <h4 class="font-medium text-stone-50 mb-4">Connect</h4>
+       <ul class="space-y-2 text-sm">
+        <li><a href="mailto:info@magnaconium.com" class="hover:text-stone-300 transition-colors">info@magnaconium.com</a></li>
+        <li><span class="text-stone-500">LinkedIn</span></li>
+        <li><span class="text-stone-500">Instagram</span></li>
+       </ul>
+      </div>
+     </div>
+     <div class="pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-stone-500">© 2024 Magna Conium. All rights reserved.</p>
+      <p class="text-xs text-stone-500">International Furniture Supply Hub</p>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      hero_headline: "Magna Conium: Redefining Furniture Supply.",
+      hero_subheadline: "A global bridge connecting Turkey's finest furniture manufacturing with international projects.",
+      cta_button_text: "Contact Magna Conium",
+      concept_title: "The Furniture Supply Hub",
+      contact_title: "Contact & Support",
+      background_color: "#fafaf9",
+      surface_color: "#ffffff",
+      text_color: "#292524",
+      primary_action_color: "#1c1917",
+      accent_color: "#92400e"
+    };
+
+    let config = { ...defaultConfig };
+
+    async function onConfigChange(cfg) {
+      config = { ...defaultConfig, ...cfg };
+
+      // Update text content
+      document.getElementById('hero-headline').textContent = config.hero_headline || defaultConfig.hero_headline;
+      document.getElementById('hero-subheadline').textContent = config.hero_subheadline || defaultConfig.hero_subheadline;
+      document.getElementById('cta-button').querySelector('span').textContent = config.cta_button_text || defaultConfig.cta_button_text;
+      document.getElementById('concept-title').textContent = config.concept_title || defaultConfig.concept_title;
+      document.getElementById('contact-title').textContent = config.contact_title || defaultConfig.contact_title;
+
+      // Update colors
+      const bgColor = config.background_color || defaultConfig.background_color;
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const accentColor = config.accent_color || defaultConfig.accent_color;
+
+      document.body.style.backgroundColor = bgColor;
+      
+      // Update primary action buttons
+      const ctaButton = document.getElementById('cta-button');
+      ctaButton.style.backgroundColor = primaryColor;
+
+      // Update accent colors
+      document.querySelectorAll('.text-amber-700\\/80, .text-amber-700').forEach(el => {
+        el.style.color = accentColor;
+      });
+
+      // Update text colors
+      document.querySelectorAll('.text-stone-900').forEach(el => {
+        el.style.color = textColor;
+      });
+    }
+
+    function mapToCapabilities(cfg) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              config.surface_color = value;
+              window.elementSdk.setConfig({ surface_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              config.primary_action_color = value;
+              window.elementSdk.setConfig({ primary_action_color: value });
+            }
+          },
+          {
+            get: () => config.accent_color || defaultConfig.accent_color,
+            set: (value) => {
+              config.accent_color = value;
+              window.elementSdk.setConfig({ accent_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(cfg) {
+      return new Map([
+        ["hero_headline", cfg.hero_headline || defaultConfig.hero_headline],
+        ["hero_subheadline", cfg.hero_subheadline || defaultConfig.hero_subheadline],
+        ["cta_button_text", cfg.cta_button_text || defaultConfig.cta_button_text],
+        ["concept_title", cfg.concept_title || defaultConfig.concept_title],
+        ["contact_title", cfg.contact_title || defaultConfig.contact_title]
+      ]);
+    }
+
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking links
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Contact form submission
+    const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      contactForm.classList.add('hidden');
+      formSuccess.classList.remove('hidden');
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Navbar background on scroll
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('shadow-sm');
+      } else {
+        nav.classList.remove('shadow-sm');
+      }
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c1de8d18385d61a',t:'MTc2OTA3MjkzNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
